@@ -1,10 +1,14 @@
 from flask import Flask,render_template, request, jsonify
 import numpy as np
 import pandas as pd
+
+
 import pickle
 
+# Your code here
 with open('lr_model.pkl', 'rb') as f:
     model = pickle.load(f)
+
 
 app = Flask(__name__, template_folder='templates')
 
